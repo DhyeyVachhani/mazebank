@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Maze-Bank</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/icons8-rupee-40.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/index.html"><span>Maze-Bank</span></a></h1>
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li class="drop-down"><a href="">Customer Management</a>
+                        <ul>
+                            <li><a href="/createCustomer.html">Create Customer</a></li>
+                            <li><a href="/updateCustomer.html">Update Customer</a></li>
+                            <li><a href="/deleteCustomer.html">Delete Customer</a></li>
+                            <li><a href="/searchCustomer.html">Search Customer</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="">Account Management</a>
+                        <ul>
+                            <li><a href="/createAccount.html">Create Account</a></li>
+                            <li><a href="/deleteAccount.html">Delete Account</a></li>
+                            <li><a href="/searchAccount.html">Search Account</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="">Status Details</a>
+                        <ul>
+                            <li><a href="/customerStatus.html">Customer Status</a></li>
+                            <li><a href="/accountStatus.html">Account Status</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="">Account Operations</a>
+                        <ul>
+                            <li><a href="/depositAmount.html">Deposit Amount</a></li>
+                            <li><a href="/withdrawAmount.html">Withdraw Amount</a></li>
+                            <li><a href="/transferAmount.html">Transfer Amount</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">LogOut</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header><!-- End #header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="heroCU">
+        <div class="hero-container">  
+            <div class="container">
+                <div class="row1">
+                    <div class="col-lg-12 col-lg-12  col-lg-12  col-lg-12 >
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Customer Status</h3>
+                                <div class="pull-right">
+                                    <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter"
+                                        data-container="body">
+            
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                                    data-filters="#dev-table" placeholder="Filter Developers" />
+                            </div>
+                            <table class="table table-hover" id="dev-table">
+                                <thead>
+                                    <tr>
+                                        <th class="color-label">Customer ID</th>
+                                        <th class="color-label">Customer SSN ID</th>
+                                        <th class="color-label">Status</th>
+                                        <th class="color-label" rowspan="2">Message</th>
+                                        <th class="color-label">Last Updated</th>
+                                        <th class="color-label">Operations</th>
+                                        <th class="color-label">View Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Bob</td>
+                                        <td>Loblaw</td>
+                                        <td>boblahblah</td>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Holden</td>
+                                        <td>Caulfield</td>
+                                        <td>penceyreject</td>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Holden</td>
+                                        <td>Caulfield</td>
+                                        <td>penceyreject</td>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Holden</td>
+                                        <td>Caulfield</td>
+                                        <td>gfdsdfghjjhgfds</td>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </section><!-- #hero -->
+
+    <main id="main">
+        <!-- ======= Contact Us Section ======= -->
+        <section id="contact" class="contact section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-about">
+                            <h3>Maze-Bank</h3>
+                            <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus.
+                                Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc
+                                congue.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-about">
+                            <h3>Services</h3>
+                            <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus.
+                                Scelerisque felis
+                                imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-about">
+                            <h3>Contact-Us</h3>
+                            <div class="info">
+                                <div>
+                                    <i class="icofont-google-map"></i>
+                                    <p class="pb-1 mb-1">A108 Adam Street<br>New York, NY 515022</p>
+                                    <i class="icofont-envelope"></i>
+                                    <p class="pb-1 mb-1">info@example.com</p>
+                                    <i class="icofont-phone"></i>
+                                    <p class="pb-0 mb-0">+1 5589 55488 55s</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+        </section><!-- End Contact Us Section -->
+
+
+
+    </main><!-- End #main -->
+
+    <footer id="footer">
+        <div class="container"></div>
+    </footer>
+
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

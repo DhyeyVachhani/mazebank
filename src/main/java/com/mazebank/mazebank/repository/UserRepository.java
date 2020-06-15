@@ -24,4 +24,21 @@ public class UserRepository {
 		User user = query.getSingleResult();
 		return user;
 	}
+	
+	@Transactional 
+	public User loginUser(String username,String password) {
+		//User user=new User();
+		Session currentSession = entityManager.unwrap(Session.class);
+		Query<User> query =  currentSession.createQuery("from User where userName="+username+"and "+"userPassword="+password,User.class);
+		User user = query.getSingleResult();
+		return user;
+	}
+	
+	@Transactional
+	public User authenticateUser(String username) {
+		Session currentSession = entityManager.unwrap(Session.class);
+		Query<User> query =  currentSession.createQuery("from User where userName="+username,User.class);
+		User user = query.getSingleResult();
+		return user;
+	}
 }
