@@ -2,6 +2,7 @@ package com.mazebank.mazebank.service;
 
 import java.util.ArrayList;
 
+import com.mazebank.mazebank.repository.UserJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,11 +20,14 @@ public class JwtUserDetailService implements UserDetailsService{
 	
 	@Autowired
 	private UserRepository userRepository;
+
+	@Autowired
+	private UserJpaRepository userJpaRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		try {
-			User user = userRepository.authenticateUser(username);
+			User user = userJpaRepository.findByUserName(username);
 			if (user == null) {
 				throw new UsernameNotFoundException("User not found with username: " + username);
 			}

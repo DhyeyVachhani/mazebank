@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "userstore")
+@Table(name = "user_master")
 public class User {
 
 	@Id

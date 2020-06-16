@@ -1,64 +1,46 @@
 package com.mazebank.mazebank.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "customer")
+@Table(name = "customer_master")
+@SequenceGenerator(name = "cust_seq" , initialValue = 100000000, allocationSize = 1)
 public class Customer {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "cust_seq")
 	@Column(name = "customer_id")
 	private long customerId;
 	
 	@Column(name = "customer_ssnid")
 	private long customerSSN;
-	
+
+	@Column(name = "customer_name")
+	private String customerName;
+
+	@Column(name = "customer_line1")
+	private String customerAddressLine1;
+
+	@Column(name = "customer_line2")
+	private String customerAddressLine2;
+
+	@Column(name = "customer_age")
+	private int customerAge;
+
 	@Column(name = "customer_status")
-	private char customerStatus;
+	private String customerStatus;
 	
 	@Column(name = "customer_lastupdate")
 	private Date customerUpdate;
-
-	public long getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
-
-	public long getCustomerSSN() {
-		return customerSSN;
-	}
-
-	public void setCustomerSSN(long customerSSN) {
-		this.customerSSN = customerSSN;
-	}
-
-	public char getCustomerStatus() {
-		return customerStatus;
-	}
-
-	public void setCustomerStatus(char customerStatus) {
-		this.customerStatus = customerStatus;
-	}
-
-	public Date getCustomerUpdate() {
-		return customerUpdate;
-	}
-
-	public void setCustomerUpdate(Date customerUpdate) {
-		this.customerUpdate = customerUpdate;
-	}
-	
-	
-
 }

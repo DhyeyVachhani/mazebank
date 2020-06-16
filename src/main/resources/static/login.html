@@ -80,11 +80,11 @@
         <div class="hero-container">
         <div class="wrapper fadeInDown">
             <div id="formContent">
-                <form>
+                <form id="loginForm">
                     <div class="login-color">Login</div>
-                    <input type="text" id="username" class="fadeIn second" name="login" placeholder="UserName">
-                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
+                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password">
+                    <input type="button" class="fadeIn fourth" value="Log In" onclick="login()">
                 </form>
             </div>
         </div>
@@ -172,7 +172,8 @@
     
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    
+    <script src="assets/js/script.js"></script>
+
     </body>
     
     </html>
