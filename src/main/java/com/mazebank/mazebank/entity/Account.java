@@ -1,20 +1,21 @@
 package com.mazebank.mazebank.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "account")
+@SequenceGenerator(name = "account_seq" , initialValue = 500000000, allocationSize = 1)
 public class Account {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "account_seq")
 	@Column(name = "account_id")
 	private long accountId;
 	
@@ -22,54 +23,17 @@ public class Account {
 	private long customerId;
 	
 	@Column(name = "account_type")
-	private char accountType;
+	private String accountType;
 	
 	@Column(name = "account_status")
-	private char accountStatus;
+	private String accountStatus;
 	
 	@Column(name = "account_lastupdate")
 	private Date accountUpdate;
 
-	public long getAccountId() {
-		return accountId;
-	}
+	@Column(name="account_balance")
+	private long balance;
 
-	public void setAccountId(long accountId) {
-		this.accountId = accountId;
-	}
-
-	public long getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
-
-	public char getAccountType() {
-		return accountType;
-	}
-
-	public void setAccountType(char accountType) {
-		this.accountType = accountType;
-	}
-
-	public char getAccountStatus() {
-		return accountStatus;
-	}
-
-	public void setAccountStatus(char accountStatus) {
-		this.accountStatus = accountStatus;
-	}
-
-	public Date getAccountUpdate() {
-		return accountUpdate;
-	}
-
-	public void setAccountUpdate(Date accountUpdate) {
-		this.accountUpdate = accountUpdate;
-	}
-	
-	
-
+	@Column(name = "account_creation_date")
+	private Date crDate;
 }

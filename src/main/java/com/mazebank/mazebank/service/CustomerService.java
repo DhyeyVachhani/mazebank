@@ -37,6 +37,7 @@ public class CustomerService {
     public String deleteCustomer(Long id) {
         Customer customer = customerRepository.findById(id).orElseThrow(() -> new BadReqestException("customer not found with customerId : " + id));
         customer.setCustomerStatus("D");
+        customerRepository.save(customer);
         return "Successfully deleted";
     }
 }
