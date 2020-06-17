@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 public class AccountService {
@@ -45,5 +46,15 @@ public class AccountService {
             accountRepository.save(existingAccount);
             return "Amount withdrawn successfully";
         }
+    }
+
+    public Account getAccount(long id) {
+
+        Optional<Account> account = accountRepository.findById(id);
+        return account.orElse(null);
+    }
+
+    public void updateAccount(Account account) {
+        accountRepository.save(account);
     }
 }
