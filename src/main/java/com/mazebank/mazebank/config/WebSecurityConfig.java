@@ -65,5 +65,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	        httpSecurity.cors();
 	        httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	    }
-
 }

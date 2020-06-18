@@ -1,5 +1,8 @@
 package com.mazebank.mazebank.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -10,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Setter
+@Getter
 @Table(name = "user_master")
 public class User {
 
@@ -30,45 +35,4 @@ public class User {
 	@Column(name = "user_role")
 	private char userRole;
 
-	public int getUserstoreId() {
-		return userstoreId;
-	}
-
-	public void setUserstoreId(int userstoreId) {
-		this.userstoreId = userstoreId;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserPassword() {
-		return userPassword;
-	}
-
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
-	}
-
-	public Date getUserTimestamp() {
-		return userTimestamp;
-	}
-
-	public void setUserTimestamp(Date userTimestamp) {
-		this.userTimestamp = userTimestamp;
-	}
-
-	public char getUserRole() {
-		return userRole;
-	}
-
-	public void setUserRole(char userRole) {
-		this.userRole = userRole;
-	}
-	
-	
 }

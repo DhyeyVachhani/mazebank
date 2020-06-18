@@ -1,5 +1,8 @@
 package com.mazebank.mazebank.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Column;
@@ -8,7 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-
+@Setter
+@Getter
 @Entity
 @Table(name = "customerdetails")
 public class CustomerDetails {
@@ -32,56 +36,4 @@ public class CustomerDetails {
 	
 	@Column(name="customer_address2")
 	private String customerAddress2;
-	
-	public long getCustomerId() {
-		return customerId;
-	}
-	
-	public void setCustomerId(long customerId) {
-		this.customerId=customerId;
-	}
-	
-	
-	public String getCustomerName() {
-		return customerName;
-	}
-	
-	public void setCustomerName(String customerName) {
-		this.customerName=customerName;
-	}
-	
-	
-	public int getCustomerAge() {
-		return customerAge;
-	}
-	
-	public void setCustomerAge(int customerAge) {
-		this.customerAge=customerAge;
-	}
-	
-	
-	public String getCustomerCity() {
-		return customerCity;
-	}
-	
-	public void setCustomerCity(String customerCity) {
-		this.customerCity=customerCity;
-	}
-	
-	
-	public String getCustomerAddress1() {
-		return customerAddress1;
-	}
-	
-	public void setCustomerAddress1(String customerAddress1) {
-		this.customerAddress1=customerAddress1;
-	}
-	
-	public String getCustomerAddress2() {
-		return customerAddress2;
-	}
-	
-	public void setCustomerAddress2(String customerAddress2) {
-		this.customerAddress2=customerAddress2;
-	}
 }

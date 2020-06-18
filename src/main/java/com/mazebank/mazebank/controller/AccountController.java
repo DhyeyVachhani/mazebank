@@ -58,7 +58,6 @@ public class AccountController {
             logger.error((e.getMessage()));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }catch(Exception e){
-            logger.error(e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }

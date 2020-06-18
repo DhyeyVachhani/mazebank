@@ -1,6 +1,5 @@
 package com.mazebank.mazebank.service;
 
-import com.mazebank.mazebank.config.JwtTokenUtil;
 import com.mazebank.mazebank.entity.Account;
 import com.mazebank.mazebank.entity.Transaction;
 import com.mazebank.mazebank.exception.BadReqestException;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class TransactionService {
@@ -44,5 +44,9 @@ public class TransactionService {
             transactionRepository.save(transaction);
             return "Amount transfer completed successfully";
         }
+    }
+
+    public List<Transaction> listTransaction(Date startDate, Date endDate){
+        return transactionRepository.findByTransactionDateBetween(startDate,endDate);
     }
 }
