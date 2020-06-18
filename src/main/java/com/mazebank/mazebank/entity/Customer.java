@@ -29,10 +29,10 @@ public class Customer {
 	@Column(name = "customer_name")
 	private String customerName;
 
-	@Column(name = "customer_line1")
+	@Column(name = "customer_addressline1")
 	private String customerAddressLine1;
 
-	@Column(name = "customer_line2")
+	@Column(name = "customer_addressline2")
 	private String customerAddressLine2;
 
 	@Column(name = "customer_age")
@@ -43,4 +43,10 @@ public class Customer {
 	
 	@Column(name = "customer_lastupdate")
 	private Date customerUpdate;
+
+	@Column(name = "customer_state")
+	private Date customerState;
+
+	@Column(name = "customer_city")
+	private Date customerCity;
 }

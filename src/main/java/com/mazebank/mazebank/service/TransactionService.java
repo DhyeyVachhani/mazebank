@@ -47,6 +47,6 @@ public class TransactionService {
     }
 
     public List<Transaction> listTransaction(Date startDate, Date endDate){
-        return transactionRepository.findByTransactionDateBetween(startDate,endDate);
+        return transactionRepository.findAllByTransactionDateBetween(startDate,endDate);
     }
 }

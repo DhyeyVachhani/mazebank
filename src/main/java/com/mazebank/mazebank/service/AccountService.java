@@ -3,6 +3,7 @@ package com.mazebank.mazebank.service;
 import com.mazebank.mazebank.entity.Account;
 import com.mazebank.mazebank.exception.BadReqestException;
 import com.mazebank.mazebank.repository.AccountRepository;
+import com.mazebank.mazebank.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,15 @@ public class AccountService {
     @Autowired
     AccountRepository accountRepository;
 
+    @Autowired
+    CustomerRepository customerRepository;
+
     public Account createAccount(Account account){
+        if(!customerRepository.findById(account.getCustomerId()).isPresent()){
+            throw new BadReqestException("No such customer with customer Id : "+account.getCustomerId());
+        }
         account.setCrDate(new Date());
+        account.setAccountUpdate(new Date());
         return accountRepository.save(account);
     }
 

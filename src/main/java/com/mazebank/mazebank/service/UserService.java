@@ -33,7 +33,6 @@ public class UserService {
 
     public User getUserById(int id) {
         Optional<User> optionalUser = userJpaRepository.findById(id);
-//        User existingUser;
         if (!optionalUser.isPresent()) {
             throw new BadReqestException("user not found with userId : " + id);
         }

@@ -18,6 +18,7 @@ public class CustomerService {
 
     public Customer createCustomer(Customer customer) {
         customer.setCustomerUpdate(new Date());
+        customer.setCustomerStatus("A");
         return customerRepository.save(customer);
     }
 

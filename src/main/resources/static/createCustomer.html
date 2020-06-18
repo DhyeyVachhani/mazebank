@@ -84,7 +84,8 @@
                       <input type="text" id="ssnId" class="fadeIn second" name="createUser" placeholder="Enter Customer SSN id">
                         <input type="text" id="name" class="fadeIn second" name="createUser" placeholder="Enter Name">
                         <input type="number" id="age" class="fadeIn second" name="createUser" placeholder="Enter Age">
-                        <input type="text" id="address" class="fadeIn second" name="address" placeholder="Enter Address">
+                        <input type="text" id="address1" class="fadeIn second" name="address" placeholder="Enter Address Line 1">
+                        <input type="text" id="address2" class="fadeIn second" name="address" placeholder="Enter Address Line 2">
                         <div>
                             <select class="select-option" id="state" name="createUser">
                                 <option value=""  class="color-place" >Select  State</option>
@@ -103,12 +104,8 @@
                                 <option  value="4">Jamnagar</option>
                             </select>
                         </div>
-                        <div><input type="submit" class="fadeIn fourth" value="Submit">
+                        <div><input type="button" class="fadeIn fourth" value="Submit" onclick="createCustomer()">
                         <input type="reset" class="fadeIn fourth" value="Reset"></div>
-                      
-                           
-                           
-                      
                     </form>
                 </div>
             </div>
@@ -197,7 +194,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
